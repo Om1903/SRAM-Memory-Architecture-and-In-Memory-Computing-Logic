@@ -31,4 +31,26 @@ To enable this, we use SRAM as a key component because it can store weights and 
 
 <img width="670" height="343" alt="image" src="https://github.com/user-attachments/assets/1a72d3ce-a946-4293-84af-5a09967c5fb9" />
 
+**2. Read and Write Operation in 6T Cell**
+
+**(a)Read Operation**
+**Read OperationPrecharge**: Both vertical Bit Lines (BL and BL') are initially charged up to the supply voltage (Logic 1).
+
+**Turn On**: The Word Line (WL) is driven HIGH, opening the two access transistors.Discharge: Inside the cell, whichever node is storing a 0 will pull its connected Bit Line down toward ground. For example, if $Q = 0$, the line BL starts to discharge.
+
+**Sensing**: The Sense Amplifier detects this tiny voltage drop on one of the Bit Lines, instantly amplifies it, and outputs the read data.
+
+<img width="748" height="324" alt="image" src="https://github.com/user-attachments/assets/ea2549c8-2239-4d6b-8a4b-c41a63555557" />
+
+**(b)Write Operation**
+
+**Pre-driving the Bit Lines**: The external write drivers force the desired value onto BL and the exact opposite value onto BL'. For example, to write a 1, BL is driven to full supply voltage ($V_{DD}$) and BL' is pulled completely to Ground ($GND$).
+
+**Enabling Access Paths**: The Word Line (WL) is driven HIGH, turning on both access transistors. This connects the strongly driven external bit lines directly to the cell's internal storage nodes ($Q$ and $Q'$).
+
+**Overpowering the Latch**: Because the external write drivers are physically larger and electrically stronger than the cell's internal inverters, they effortlessly overwhelm the old state. The ground line on BL' drains the high node, forcing the internal feedback loop to instantly flip.
+
+**Locking the State**: Once the cell flips to match the bit lines, the Word Line (WL) is pulled back LOW. This closes the access transistors, isolating the cell and securely locking the new data inside.
+
+<img width="730" height="406" alt="image" src="https://github.com/user-attachments/assets/f923d123-979c-43cb-ad21-c49bd05ab1cb" />
 
