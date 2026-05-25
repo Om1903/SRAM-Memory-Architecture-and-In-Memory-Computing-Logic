@@ -21,6 +21,7 @@ Digital IMC is a computing approach where logic operations like AND, OR, XOR,add
 To enable this, we use SRAM as a key component because it can store weights and input data in binary form, and also allows performing bitwise operations within the memory array itself. SRAM is fast, CMOS-compatible, and ideal for repeated read/write cycles—making it perfect for implementing digital logic directly in hardware.
 
 
+
 **SRAM 4x4 Array Peripharals and Architecture Using CMOS Technology**
 
 **1. 6T SRAM Bitcell**
@@ -30,6 +31,8 @@ To enable this, we use SRAM as a key component because it can store weights and 
 **Static Storage**: Unlike DRAM (which uses capacitors that leak charge and need constant refreshing), an SRAM cell holds its data continuously as long as power is supplied.
 
 <img width="670" height="343" alt="image" src="https://github.com/user-attachments/assets/1a72d3ce-a946-4293-84af-5a09967c5fb9" />
+
+
 
 **2. Read and Write Operation in 6T Cell**
 
