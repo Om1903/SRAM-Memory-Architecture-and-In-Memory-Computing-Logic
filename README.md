@@ -13,6 +13,7 @@ Physical Separation of Units: Conventional computing forces a strict physical se
 <img width="850" height="441" alt="image" src="https://github.com/user-attachments/assets/77a0c428-0cc3-4d03-abbb-c89969d9acf0" />
 
 
+
 **Digital In-Memory Computing Architecture**
 
 Digital IMC is a computing approach where logic operations like AND, OR, XOR,addition etc are performed directly inside memory, rather than transferring data to a separate processor. Since all operations use binary values (0s and 1s), it's called digital IMC—offering high reliability, speed, and energy efficiency.
