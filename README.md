@@ -57,11 +57,11 @@ To enable this, we use SRAM as a key component because it can store weights and 
 
 <img width="730" height="406" alt="image" src="https://github.com/user-attachments/assets/f923d123-979c-43cb-ad21-c49bd05ab1cb" />
 
-3. Precharge Circuit
+**3. Precharge Circuit**
 
-Utilizes a 3-PMOS network to pull both $\text{BL}$ and $\text{BLB}$ up to $V_{dd}$ and equalize their potentials.
+**Precharge & Equalization**: Utilizes a 3-PMOS network to pull both $\text{BL}$ and $\text{BLB}$ up to $V_{dd}$ and equalize their potentials.
 
-Prevents read disturbs and speeds up sensing margins by establishing a clean, balanced baseline before wordline activation.
+**Read Readiness**: Prevents read disturbs and speeds up sensing margins by establishing a clean, balanced baseline before wordline activation.
 
 <img width="690" height="469" alt="image" src="https://github.com/user-attachments/assets/f919c55b-41e1-4185-82d6-f35d3e8f3d92" />
 
