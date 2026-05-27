@@ -65,3 +65,46 @@ To enable this, we use SRAM as a key component because it can store weights and 
 
 <img width="690" height="469" alt="image" src="https://github.com/user-attachments/assets/f919c55b-41e1-4185-82d6-f35d3e8f3d92" />
 
+**4. Cross Coupled Sense Amplifier**
+
+Read Operation:
+
+When a wordline is activated, the bitcell slightly pulls down either BL or BLB, depending on whether it stores 0 or 1
+
+This creates a tiny imbalance between BL and BLB.
+
+The sense amplifier, which is connected to both lines, is then enabled (using SAE).
+
+The sense amplifier detects the data stored based on changes observed in BL and BLB value , if BL changes from 1->0 then it means data stored in bitcell is logic 0 and if BLB changes from 1->o depicts data stored was logic 1
+
+Note - These BL and BlB were precharged initially before read operation and thus changes in these values are fed to sense amplifier .
+
+**Why Cross Coupled Design?**
+
+Works well even when the cell doesn’t strongly pull the bitlines (important for low-voltage or fast-access SRAM), hence High Sensitivity.
+
+It only turns on when SAE (Sense Amplifier Enable) is high.
+
+With SAE low; Data and Data# are pre-charge high 
+
+<img width="1111" height="702" alt="image" src="https://github.com/user-attachments/assets/782e4504-d6f4-4d93-9448-41d450f2894e" />
+
+**5. Write Driver**
+
+A circuit which basically forces the data into the bitcell by enabling wr_enable control.
+
+It also uses BL and BLB and based on their value the 1 bit data is written into the bitcell .
+
+The circuitry works as , if BL changes from 1->0 the logic 0 will be written into the bitcell and if BLB is changed form 1->0 then logic 1 will be written.
+
+<img width="453" height="301" alt="image" src="https://github.com/user-attachments/assets/6fdb565a-7838-476f-8d95-fb00c86a3982" />
+
+
+**Overall Circuit for 1 bitcell read and write**
+
+<img width="375" height="880" alt="image" src="https://github.com/user-attachments/assets/260eff56-d7bf-479e-82fc-352ded82e6bc" />
+
+**Final Circuit 2*2 SRAM Array**
+
+<img width="375" height="880" alt="image" src="https://github.com/user-attachments/assets/e88dcaba-242d-4671-99b1-fe65ab9818dc" />
+
