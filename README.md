@@ -106,5 +106,5 @@ The circuitry works as , if BL changes from 1->0 the logic 0 will be written int
 
 **Final Circuit 2*2 SRAM Array**
 
-<img width="375" height="880" alt="image" src="https://github.com/user-attachments/assets/e88dcaba-242d-4671-99b1-fe65ab9818dc" />
+<img width="1158" height="900" alt="image" src="https://github.com/user-attachments/assets/0e594daa-2570-4cf4-91c0-7ed1fdba5edc" />
 
